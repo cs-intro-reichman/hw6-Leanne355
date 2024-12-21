@@ -15,6 +15,8 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.Socket;
 import java.net.URLConnection;
+import java.net.URI;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Locale;
@@ -177,7 +179,9 @@ public final class In {
 
             // or URL from web
             if (url == null) {
-                url = new URL(name);
+                URI uri = Paths.get(name).toUri();
+                url = uri.toURL();
+                //url = new URL(name);
             }
 
             URLConnection site = url.openConnection();
