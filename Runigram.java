@@ -9,7 +9,7 @@ public class Runigram {
 		
 		// Tests the reading and printing of an image:	
 		Color[][] tinypic = read("tinypic.ppm");
-		print(tinypic);
+		//print(tinypic);
 
 		// Creates an image which will be the result of various 
 		// image processing operations:
@@ -24,17 +24,18 @@ public class Runigram {
 		// Tests the vertically flipping of an image:
 		image = flippedVertically(tinypic);
 		System.out.println();
-		print(image);
+		//print(image);
 
 		// Tests the grayscaled of an image:
 		image = grayScaled(tinypic);
 		System.out.println();
-		print(image);
+		//print(image);
 
 		// Tests the scaled of an image:
 		image = scaled(tinypic, 3, 5);
 		System.out.println();
-		print(image);
+		//print(image);
+
 
 		
 		
